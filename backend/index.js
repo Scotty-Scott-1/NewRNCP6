@@ -25,9 +25,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // --- API Routes ---
-const userRoutes = require("./DB/Routes/users");
-const authRoutes = require("./DB/Routes/auth");
-const checkTokenRoutes = require("./DB/Routes/checkAccessToken");
+//const userRoutes = require("./DB/Routes/users");
+const authRoutes = require("./api/auth.js");
+/*const checkTokenRoutes = require("./DB/Routes/checkAccessToken");
 const refreshTokenRoutes = require("./DB/Routes/refreshAccessToken");
 const newcampaign = require("./DB/Routes/newCampaignRoute.js");
 const getcampaign = require("./DB/Routes/getCampaignRoute.js");
@@ -37,12 +37,12 @@ const getOneMailingList= require("./DB/Routes/getOneMailingList.js");
 const updateMailingList = require("./DB/Routes/updateMailingList.js");
 const addcontact = require("./DB/Routes/addContact.js");
 const getOneCampaign = require("./DB/Routes/getOneCampaign.js");
-const updateCampaign= require("./DB/Routes/updateCampaign.js");
+const updateCampaign= require("./DB/Routes/updateCampaign.js");*/
 
 // Register routes with `/api` prefix
-app.use("/api/users", userRoutes);
+//app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
-app.use("/api/checkToken", checkTokenRoutes);
+/*app.use("/api/checkToken", checkTokenRoutes);
 app.use("/api/refreshToken", refreshTokenRoutes);
 app.use("/api/newcampaign", newcampaign);
 app.use("/api/getcampaign", getcampaign);
@@ -52,7 +52,7 @@ app.use("/api/getOneMailingList", getOneMailingList);
 app.use("/api/updateMailingList", updateMailingList);
 app.use("/api/addcontact", addcontact);
 app.use("/api/getOneCampaign", getOneCampaign);
-app.use("/api/updateCampaign", updateCampaign);
+app.use("/api/updateCampaign", updateCampaign);*/
 
 // Example test API route
 app.get("/api", (req, res) => {
