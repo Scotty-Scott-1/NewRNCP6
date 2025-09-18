@@ -12,7 +12,7 @@ const Campaigns = () => {
 	useEffect(() => {
 		const getCampaigns = async() => {
 			try {
-				const response = await fetch("https://localhost:5001/api/campaign/get", {
+				const response = await fetch("https://localhost:3000/api/campaign/get", {
 					method: "GET",
 					headers: {
 						"Authorization": `Bearer ${accessToken}`,

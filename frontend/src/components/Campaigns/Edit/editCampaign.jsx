@@ -52,7 +52,7 @@ const EditCampaign = () => {
 
 
     try {
-      const response = await fetch("https://localhost:5001/api/campaign/update", {
+      const response = await fetch("http://localhost:3000/api/campaign/update", {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${accessToken}`,

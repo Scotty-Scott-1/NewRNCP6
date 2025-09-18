@@ -11,7 +11,7 @@ const MailingLists = () => {
   useEffect(() => {
     const getMailingLists = async () => {
       try {
-        const response = await fetch("http://localhost:000/api/mailinglist/get", {
+        const response = await fetch("http://localhost:3000/api/mailinglist/get", {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${accessToken}`,
