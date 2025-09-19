@@ -1,4 +1,10 @@
 /* Form container */
+.outercontainer {
+height: 100vh;
+width: 100vh;
+background-color: #000000;
+}
+
 .container {
   max-width: 600px;
   margin: 200px auto;

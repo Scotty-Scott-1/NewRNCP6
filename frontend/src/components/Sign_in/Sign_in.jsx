@@ -57,22 +57,24 @@ const Sign_in = () => {
 
 
 	return (
+		<div className={styles.outercontainer}>
 		<form className={styles.container} onSubmit={handleSubmit}>
 			<input
 				type="text"
 				value={username} onChange={(e) => setUsername(e.target.value)}
 				className={styles.input}
 				placeholder="Username"
-			/>
+				/>
 			<input
 				type="password"
 				value={password} onChange={(e) => setPassword(e.target.value)}
 				className={styles.input}
 				placeholder="Password"
-			/>
+				/>
 		<button type="submit" className={styles.button}> Sign In</button>
 		<p>Don’t have an account? <Link to="/register">Register</Link></p>
 	</form>
+	</div>
   );
 };
 
