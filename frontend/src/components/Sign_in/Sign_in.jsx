@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Sign_in.module.css';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../security/authContext';
+const apiUrl = import.meta.env.VITE_API_URL;
 
 
 const Sign_in = () => {
@@ -28,7 +29,7 @@ const Sign_in = () => {
 			and accessToken in the response body.
 		*/
 		try {
-			const res = await fetch("http://localhost:3000/api/auth", {
+			const res = await fetch(`${apiUrl}/api/auth`, {
 				method: "POST",
 				headers: {"Content-Type": "application/json"},
 				body: JSON.stringify({ username, password }),
