@@ -46,7 +46,6 @@ router.post("/", async (req, res) => {
 			sameSite: "None",     // required for cross-origin cookies
 			maxAge: 7 * 24 * 60 * 60 * 1000,
 			path: "/",
-			domain: "localhost"
 		});
 
 		res.status(200).json({
