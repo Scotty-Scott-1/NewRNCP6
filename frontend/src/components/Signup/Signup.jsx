@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Signup.module.css';
 import { useNavigate, Link } from 'react-router-dom';
-const apiUrl = import.meta.env.VITE_API_URL;
 
 const SignUp = () => {
 	/*STOP RELOADING: Stop the form from reloading the page*/
@@ -27,7 +26,7 @@ const SignUp = () => {
 		}
 		/*TRY SENDING DATA TO BACKEND: Send the form data to the backend*/
 		try {
-			const response = await fetch(`${apiUrl}/api/users`, {
+			const response = await fetch("/api/users", {
 				method: "POST",
 				headers: {"Content-Type": "application/json"},
 				body: JSON.stringify({
